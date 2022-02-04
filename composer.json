@@ -1,42 +1,50 @@
 {
-    "name": "aryehraber/statamic-color-extractor",
-    "type": "statamic-addon",
-    "description": "Extract colors from images.",
-    "keywords": [
-        "statamic",
-        "image color",
-        "color extractor"
-    ],
-    "homepage": "https://github.com/aryehraber/statamic-color-extractor",
-    "license": "MIT",
-    "require": {
-        "league/color-extractor": "0.3.*",
-        "statamic/cms": "^3.0",
-        "davidgorges/color-contrast": "^1.0"
+  "name": "aryehraber/statamic-color-extractor",
+  "type": "statamic-addon",
+  "description": "Extract colors from images.",
+  "keywords": [
+    "statamic",
+    "image color",
+    "color extractor"
+  ],
+  "homepage": "https://github.com/aryehraber/statamic-color-extractor",
+  "license": "MIT",
+  "repositories": [
+    {
+      "url": "https://github.com/Giant-Peach-Design/color-extractor.git",
+      "type": "git"
+    }
+  ],
+  "require": {
+    "league/color-extractor": "dev-master",
+    "statamic/cms": "^3.0",
+    "davidgorges/color-contrast": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "AryehRaber\\ColorExtractor\\": "src"
+    }
+  },
+  "authors": [
+    {
+      "name": "Aryeh Raber",
+      "email": "aryeh.raber@gmail.com",
+      "homepage": "https://aryeh.dev",
+      "role": "Developer"
+    }
+  ],
+  "extra": {
+    "statamic": {
+      "name": "ColorExtractor",
+      "description": "Extract colors from images.",
+      "version": "1.1.1"
     },
-    "autoload": {
-        "psr-4": {
-            "AryehRaber\\ColorExtractor\\": "src"
-        }
-    },
-    "authors": [{
-        "name": "Aryeh Raber",
-        "email": "aryeh.raber@gmail.com",
-        "homepage": "https://aryeh.dev",
-        "role": "Developer"
-    }],
-    "extra": {
-        "statamic": {
-            "name": "ColorExtractor",
-            "description": "Extract colors from images.",
-            "version": "1.1.1"
-        },
-        "laravel": {
-            "providers": [
-                "AryehRaber\\ColorExtractor\\ColorExtractorServiceProvider"
-            ]
-        }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    "laravel": {
+      "providers": [
+        "AryehRaber\\ColorExtractor\\ColorExtractorServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }
